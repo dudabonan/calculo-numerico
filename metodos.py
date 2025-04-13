@@ -3,7 +3,7 @@ import math
 
 def menu(lista, txt): 
     '''
-    printa os menus (que eu fiz em formato de lista) de acordo com o título de cada um deles
+    printa os menus (em formato de lista) de acordo com o título de cada um deles
     '''
     print('\n')
     print('--'*22)
@@ -14,16 +14,13 @@ def menu(lista, txt):
         time.sleep(0.5)
 
     print('\n')
-    r = int(input('Escolha uma opção e pressione ENTER: ')) #retorna a opção do usuario 
+    r = int(input('Escolha uma opção e pressione ENTER: ')) # retorna a opção do usuario 
 
     return r
 
 
-def função(f, x):
-    '''
-    retorna o valor de cada entrada, fiz assim pra poder reaproveitar em todos os métodos 
-    e f é o numero da opção
-    '''
+def função(f, x): # retorna o valor de cada f(x)
+    
     if f == 1:
         return x**3 - 7*(x**2) + 14*x - 6
 
@@ -34,10 +31,8 @@ def função(f, x):
         return x**2 + math.sin(x) - 5
 
 
-def derivada(f, x):
-    '''
-    derivadas manuais para utilizar no método de newton
-    '''
+def derivada(f, x): # derivadas manuais para utilizar no método de newton
+    
     if f == 1:
         return 3*(x**2) - 14*x + 14
 
@@ -48,7 +43,7 @@ def derivada(f, x):
         return 2*x + math.cos(x)
 
 
-def bisseção(f): # recebe só o parametro de qual a função o usuário quer 
+def bisseção(f):
 
     print('\n')
     a = float(input('Insira um valor para o intervalo inferior: '))
